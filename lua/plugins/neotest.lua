@@ -1,0 +1,14 @@
+-- NeoTest 🧪 --
+return {}
+-- return {
+-- 	"nvim-neotest/neotest",
+-- 	dependencies = {
+--     "nvim-neotest/nvim-nio",
+-- 	},
+--   opts = {
+--     adapters = { "neotest-jest" }
+--   },
+-- 	config = function()
+-- 		require("neotest").setup()
+-- 	end,
+-- }
