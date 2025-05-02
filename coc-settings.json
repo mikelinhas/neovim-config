@@ -1,0 +1,22 @@
+{
+  "snippets.ultisnips.pythonPrompt": false,
+  "codeLens.enable": true,
+  "coc.preferences.formatOnSave": true,
+  "workspace.rootPatterns": ["package.json", ".git"],
+  "diagnostic.errorSign": "✗",
+  "java.completion.enabled": true,
+  "java.import.maven.enabled": true,
+  "java.jdt.ls.vmargs": "-javaagent:/Users/U787248/lombok-1.18.30.jar -Xbootclasspath/a:/Users/U787248/lombok-1.18.30.jar",
+  "java.jdt.ls.lombokSupport.enabled": true,
+  "java.referencesCodeLens.enabled": true,
+  "java.trace.server": "verbose",
+  "java.jdt.ls.java.home": "/Users/U787248/.sdkman/candidates/java/21.0.4-tem",
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-21",
+      "path": "/Users/U787248/.sdkman/candidates/java/21.0.4-tem",
+      "default": true
+    }
+  ],
+  "suggest.noselect": false
+}
