@@ -21,7 +21,6 @@ vim.opt.rtp:prepend(lazypath)
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
--- Note - this is not being used --
 local opts = {
   spec = {
     -- import your plugins
@@ -36,3 +35,10 @@ local opts = {
 
 -- Setup lazy.nvim
 require("lazy").setup("plugins", opts)
+
+-- Auto-update all plugins on startup
+vim.api.nvim_create_autocmd("VimEnter", {
+  callback = function()
+    require("lazy").update({ show = false })
+  end,
+})

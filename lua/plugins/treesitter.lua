@@ -5,7 +5,8 @@ return {
 	config = function()
 		local config = require("nvim-treesitter.configs")
 		config.setup({
-			autoinstall = true,
+			auto_install = true,
+			ensure_installed = { "svelte" },
 			highlight = { enable = true },
 			indent = { enable = true },
 		})

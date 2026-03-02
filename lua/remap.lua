@@ -1,6 +1,4 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
-vim.keymap.set("n", " ", "<Nop>", { silent = true, remap = false })
 
 -- buffers
 vim.keymap.set("n", "<Tab>", ":bnext<CR>")
@@ -26,7 +24,3 @@ vim.keymap.set("n", "<leader><leader>", function()
   print("Neovim config reloaded!")
 end)
 
--- disable netrw at the very start of your init.lua (strongly advised)
--- for nvim-tree
-vim.g.loaded = 1
-vim.g.loaded_netrwPlugin = 1
