@@ -14,6 +14,7 @@ return {
         json = { "prettier" },
         css = { "prettier" },
         lua = { "stylua" },
+        sql = { "sqlfluff" },
       },
     })
 

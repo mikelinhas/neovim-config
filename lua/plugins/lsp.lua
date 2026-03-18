@@ -14,7 +14,7 @@ return {
     dependencies = { "williamboman/mason.nvim" },
     config = function()
       require("mason-tool-installer").setup({
-        ensure_installed = { "prettier", "stylua" },
+        ensure_installed = { "prettier", "stylua", "sqlfluff" },
       })
     end,
   },
@@ -35,6 +35,7 @@ return {
           "svelte",
           "eslint",
           "tailwindcss",
+          "sqls",
         },
         automatic_enable = true,
       })
@@ -139,6 +140,18 @@ return {
             "--tsProbeLocations", new_root_dir,
             "--ngProbeLocations", new_root_dir,
           }
+        end,
+      })
+
+      -- sqls: point at a per-project .sqls.yml if present, otherwise start without DB config
+      vim.lsp.config("sqls", {
+        on_new_config = function(new_config, new_root_dir)
+          local local_cfg = new_root_dir .. "/.sqls.yml"
+          if vim.fn.filereadable(local_cfg) == 1 then
+            new_config.cmd = { "sqls", "--config", local_cfg }
+          else
+            new_config.cmd = { "sqls" }
+          end
         end,
       })
     end,
